@@ -1,0 +1,141 @@
+/*Modificado por Laura García
+legend{display: none
+}*/
+
+/*Modificado por Laura García
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 1.2rem;
+}*/
+
+/*Modificado por Laura García
+h1 {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}*/
+
+.wrapper-tabs {
+  /*width: 40em; Modificado por Laura García*/
+  margin: auto;
+}
+
+[role="tablist"] {
+  margin: 0 0 -.1em;
+  overflow: visible;
+}
+
+[role="tab"] {
+  text-decoration: none !important; /*Añadido por Laura García*/
+  position: relative;
+  margin: .3em 0 0; /* margin: 0; Modificado por Laura García*/
+  padding: .3em .5em .4em;
+  border: 1px solid hsl(219, 1%, 72%);
+  border-radius: .2em .2em 0 0;
+  box-shadow: 0 0 .2em hsl(219, 1%, 72%);
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit; 
+  background: #fff; /*background: hsl(220, 20%, 94%) Modificado por Laura García*/
+  color: #333 !important; /*Añadido por Laura García*/
+  display: inline-block; /*Añadido por Laura García*/
+}
+
+[role="tab"]:hover,
+[role="tab"]:focus{	
+  background: hsl(220, 43%, 99%) !important; /*Añadido por Laura García*/
+  color: #C2410A !important; /*Añadido por Laura García*/
+}
+
+[role="tab"]:hover::before,
+[role="tab"]:focus::before,
+[role="tab"][aria-selected="true"]::before {
+  position: absolute;
+  bottom: 100%;
+  right: -1px;
+  left: -1px;
+  border-radius: 0.2em 0.2em 0 0; 
+  border-top: 3px solid #C2410A; /*border-top: 3px solid hsl(20, 96%, 48%); Modificado por Laura García*/
+  content: '';
+}
+
+[role="tab"][aria-selected="true"]::before{  /*Añadido por Laura García*/
+  right: 0 !important;
+  left: 0 !important;  
+}
+
+[role="tab"][aria-selected="true"] {
+  border-radius: 0; 
+  background-color: #C2410A !important; /*background: hsl(220, 43%, 99%); Modificado por Laura García*/
+  outline: 0;
+  color: #fff !important; /*Añadido por Laura García*/
+}
+
+/*Modificado por Laura García
+[role="tab"][aria-selected="true"]:hover {
+  background-color: #FFF !important;
+  color: #C2410A !important;  
+}*/
+
+/*Modificado por Laura García
+[role="tab"][aria-selected="true"]:not(:focus):not(:hover)::before {
+  border-top: 5px solid hsl(218, 96%, 48%);
+}*/
+
+[role="tab"][aria-selected="true"]::after {
+  position: absolute;
+  z-index: 3;
+  bottom: -1px;
+  right: 0;
+  left: 0;
+  height: .3em;
+  /*background: hsl(220, 43%, 99%); Modificado por Laura García*/
+  box-shadow: none;
+  content: '';
+}
+
+[role="tab"]:hover,
+[role="tab"]:focus,
+[role="tab"]:active {
+  outline: 0;
+  border-radius: 0;
+  color: inherit;
+}
+
+[role="tab"]:hover::before,
+[role="tab"]:focus::before { 
+  border-color: #C2410A; /*border-color: hsl(20, 96%, 48%); Modificado por Laura García*/
+}
+
+[role="tabpanel"] {
+  position: relative;  
+  z-index: 2;
+  padding: .5em .5em .7em;
+  border: 1px solid hsl(219, 1%, 72%) !important;
+  box-shadow: 0 0 .2em hsl(219, 1%, 72%); 
+  background: #fafafa; /*background: hsl(220, 20%, 94%); Modificado por Laura García*/
+}
+
+[role="tabpanel"]:focus {
+  border-color: hsl(20, 96%, 48%);
+  /*box-shadow: 0 0 .2em hsl(20, 96%, 48%); Modificado por Laura García*/
+  outline: 0;
+}
+
+[role="tabpanel"]:focus::after {
+  position: absolute;
+  bottom: 0;
+  right: -1px;
+  left: -1px;
+  /*border-bottom: 3px solid hsl(20, 96%, 48%); Modificado por Laura García*/
+  border-radius: 0 0 0.2em 0.2em;
+  content: '';
+}
+
+[role="tabpanel"] p {
+  margin: 0;
+}
+
+[role="tabpanel"] * + p {
+  margin-top: 1em;
+}
